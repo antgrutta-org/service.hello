@@ -9,4 +9,4 @@ on:
 
 jobs:
   call-standard-workflow:
-    uses: antgrutta-org/actions.workflow/.github/workflows/static-scan.yaml@main
+    uses: antgrutta-org/actions.workflows/.github/workflows/static-scan.yaml@main
