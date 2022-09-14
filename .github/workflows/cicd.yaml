@@ -10,3 +10,4 @@ on:
 jobs:
   call-standard-workflow:
     uses: antgrutta-org/actions.workflows/.github/workflows/static-scan.yaml@main
+    secrets: inherit
