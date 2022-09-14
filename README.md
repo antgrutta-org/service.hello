@@ -1,2 +1,3 @@
-# service.hello
-A simple python hello service
+# Python Hello Service
+
+A simple python hello service.
