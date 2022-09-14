@@ -1,12 +1,14 @@
 from flask import Flask
+from flask_wtf.csrf import CSRFProtect
 import os
 
 app = Flask(__name__)
+csrf.init_app(app)
 
 
 @app.route('/')
 def index():
-    return 'Hello World!'
+    return 'Hello World!!'
 
 
 if __name__ == '__main__':
