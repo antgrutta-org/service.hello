@@ -1,0 +1,12 @@
+name: CICD Workflow
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  call-standard-workflow:
+    uses: antgrutta-org/actions.workflow/static-scan.yaml@main
