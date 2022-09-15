@@ -8,6 +8,17 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  call-standard-workflow:
-    uses: antgrutta-org/actions.workflows/.github/workflows/static-scan.yaml@main
+  quality_gate:
+    name: Quality Gate Check
+    # Ensure that the job runs when the workflow is triggered by a pull request event
+    if: github.event_name == 'pull_request'
+    # Referencing the static scan workflow
+    uses: antgrutta-org/actions.workflows/.github/workflows/quality-gates.yaml@main
+    secrets: inherit
+
+  build_publish:
+    name: Build and Publish Docker Image
+    # Ensure that the job runs when the workflow is triggered by a push event
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    uses: antgrutta-org/actions.workflows/.github/workflows/docker-build-publish.yaml@main
     secrets: inherit
