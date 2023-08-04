@@ -10,7 +10,7 @@ csrf.init_app(app)
 
 @app.route('/')
 def index():
-    return 'Hello World!'
+    return 'Hello World from GitHub!'
 
 
 if __name__ == '__main__':
