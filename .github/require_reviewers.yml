@@ -1,0 +1,11 @@
+groups:
+  review-group-all:
+    members:
+      - antgrutta
+    required: 1
+
+  review-group-any:
+    members:
+      - proxycat
+      - shell-cat
+    required: 1
