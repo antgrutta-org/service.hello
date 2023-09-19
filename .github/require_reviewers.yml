@@ -1,14 +1,14 @@
 groups:
   review-group-all:
     members:
-      - team:admins
+      - team:antgrutta-org/admins
     required: 1
     paths:
       - "**"
 
   review-group-any:
     members:
-      - team:developers
+      - team:antgrutta-org/developers
     required: 1
     paths:
       - "**"
