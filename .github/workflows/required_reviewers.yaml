@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Request review based on files changes and/or groups the author belongs to
-        uses: BrianCArnold/require-user-approval@v0.0.1
+        uses: BrianCArnold/RequireUserApproval
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config: .github/require_reviewers.yml
