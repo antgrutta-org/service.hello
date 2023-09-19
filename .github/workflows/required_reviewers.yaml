@@ -2,7 +2,7 @@ name: Approvals
 
 on:
   pull_request_review:
-    types: [edited, submitted]
+    types: [editted, submitted]
 
 jobs:
   require_user_approval:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Request review based on files changes and/or groups the author belongs to
-        uses: BrianCArnold/RequireUserApproval
+        uses: briancarnold/requireuserapproval
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config: .github/require_reviewers.yml
