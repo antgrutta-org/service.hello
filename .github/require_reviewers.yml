@@ -1,14 +1,15 @@
 groups:
   review-group-all:
     members:
-      - team:antgrutta-org/admins
+      - antgrutta
     required: 1
     paths:
       - "**"
 
   review-group-any:
     members:
-      - team:antgrutta-org/developers
+      - shell-cat
+      - proxy-cat
     required: 1
     paths:
       - "**"
