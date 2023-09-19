@@ -1,11 +1,14 @@
 groups:
   review-group-all:
     members:
-      - antgrutta
+      - team:admins
     required: 1
+    paths:
+      - "**"
 
   review-group-any:
     members:
-      - proxycat
-      - shell-cat
+      - team:developers
     required: 1
+    paths:
+      - "**"
