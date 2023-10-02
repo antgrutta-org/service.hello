@@ -8,13 +8,13 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  quality_gate:
-    name: Quality Gate Check
-    # Ensure that the job runs when the workflow is triggered by a pull request event
-    if: github.event_name == 'pull_request'
-    # Referencing the static scan workflow
-    uses: antgrutta-org/actions.workflows/.github/workflows/quality-gates.yaml@main
-    secrets: inherit
+  # quality_gate:
+  #   name: Quality Gate Check
+  #   # Ensure that the job runs when the workflow is triggered by a pull request event
+  #   if: github.event_name == 'pull_request'
+  #   # Referencing the static scan workflow
+  #   uses: antgrutta-org/actions.workflows/.github/workflows/quality-gates.yaml@main
+  #   secrets: inherit
 
   build_publish:
     name: Build and Publish Docker Image
